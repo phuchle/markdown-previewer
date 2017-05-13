@@ -24,4 +24,8 @@ class Input extends React.Component {
   }
 }
 
+Input.propTypes = {
+  onUserInput: PropTypes.func.isRequired
+}
+
 export default Input;
