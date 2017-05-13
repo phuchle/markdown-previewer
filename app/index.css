@@ -24,8 +24,24 @@ html, body {
   width: 500px;
   height: 450px;
   margin: 10px;
+  padding: 10px;
 }
 
 .input {
   resize: vertical;
+}
+
+.output {
+  overflow: scroll;
+  border: 1px solid #8e8c8c;
+}
+
+@media screen and (max-width: 640px) {
+  .components {
+    display: flex;
+    flex-direction: column;
+  }
+  .input, .output {
+    width: 100%;
+  }
 }

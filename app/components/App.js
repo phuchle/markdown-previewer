@@ -19,6 +19,7 @@ class App extends React.Component {
     return (
       <div className='main-container'>
         <h1>Markdown Previewer</h1>
+        <strong>Markdown comes in, HTMl comes out.  Can't explain that.</strong>
         <div className='components'>
           <Input
             onUserInput={this.handleUserInput}
@@ -26,6 +27,7 @@ class App extends React.Component {
           />
           <Output input={this.state.inputValue} />
         </div>
+        <a href="https://github.com/phuchle/markdown-previewer">Code by Phuc Le</a>
       </div>
     )
   }
