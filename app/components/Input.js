@@ -8,18 +8,15 @@ class Input extends React.Component {
     this.handleChange = this.handleChange.bind(this);
   }
   handleChange(event) {
-    console.log('value: ', event.target.value);
-
     this.props.onUserInput(event.target.value);
   }
   render() {
     return (
       <textarea
         className='input'
+        value={this.props.value}
         onChange={this.handleChange}
-      >
-
-      </textarea>
+      />
     )
   }
 }
