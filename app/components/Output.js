@@ -1,11 +1,20 @@
 import React from 'react';
+import marked from 'marked';
+marked.setOptions({
+  sanitize: true
+});
 
 class Output extends React.Component {
   render() {
-    console.log('App state: ', this.props.input);
+    let output = {
+      __html: marked(this.props.input)
+    };
+
     return (
-      <div className='output'>
-        output
+      <div
+        className='output'
+        dangerouslySetInnerHTML={output}
+        >
       </div>
     )
   }
